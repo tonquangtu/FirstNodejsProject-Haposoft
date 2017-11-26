@@ -1,0 +1,266 @@
+@font-face {
+  font-family: Hiragino-01;
+  src: url(../fonts/Hiragino-w1.ttc);
+}
+
+@font-face {
+  font-family: Hiragino-03;
+  src: url(../fonts/Hiragino-w3.ttc);
+}
+
+@font-face {
+  font-family: Hiragino-05;
+  src: url(../fonts/Hiragino-w5.ttc);
+}
+
+@font-face {
+  font-family: Hiragino-07;
+  src: url(../fonts/Hiragino-w7.ttc);
+}
+
+$font-01: Hiragino-01;
+$font-03: Hiragino-03;
+$font-05: Hiragino-05;
+$font-07: Hiragino-07;
+/* Reset style default */
+
+// Color
+$color-01: #2c3239;
+$color-02: #06bebd;
+$color-03: #4a4a4a;
+$color-04: #b3bdc2;
+::-webkit-scrollbar {
+  display: none;
+}
+
+p {
+  &:last-child {
+    margin: 0;
+  }
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+ul, ol {
+  padding: 0;
+  margin: 0;
+  li {
+    list-style-type: none;
+  }
+}
+
+input[type="text"], input[type="email"], input[type="password"], textarea {
+  width: 100%;
+  outline: none;
+  &:focus {
+    outline: none;
+  }
+}
+
+button {
+  &:focus {
+    outline: none;
+  }
+}
+
+select {
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: $font-01;
+}
+
+/* Extend */
+%clearfix {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+%transition {
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+@mixin translate($translateX, $translateY) {
+  -webkit-transform: translate($translateX, $translateY);
+  -moz-transform: translate($translateX, $translateY);
+  -ms-transform: translate($translateX, $translateY);
+  -o-transform: translate($translateX, $translateY);
+  transform: translate($translateX, $translateY);
+}
+
+@mixin scale($scale) {
+  -webkit-transform: scale($scale);
+  -moz-transform: scale($scale);
+  -ms-transform: scale($scale);
+  -o-transform: scale($scale);
+  transform: scale($scale);
+}
+
+@mixin skew($skew) {
+  -webkit-transform: skew($skew);
+  -moz-transform: skew($skew);
+  -ms-transform: skew($skew);
+  -o-transform: skew($skew);
+  transform: skew($skew);
+}
+
+@mixin rotate($rotate) {
+  transform: rotate($rotate);
+  -webkit-transform: rotate($rotate);
+  -moz-transform: rotate($rotate);
+  -ms-transform: rotate($rotate);
+  -o-transform: rotate($rotate);
+}
+
+/* Font icon css */
+%fa {
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+}
+
+body {
+  font-family: $font-01;
+  overflow-x: hidden;
+  line-height: 1.4;
+  min-height: 100vh;
+  font-size: 18px;
+  color: $color-01;
+  @media screen and (max-width: 320px) {
+    font-size: 14px;
+  }
+}
+
+.main-container {
+  min-height: calc(100vh - 193px);
+  &.bg-01 {
+    background-color: #f6f6f6;
+  }
+  &.bg-02 {
+    background-color: #eee;
+  }
+  &.content-no-footer {
+    min-height: calc(100vh - 91px);
+  }
+}
+
+.global-btn {
+  border: 1px solid #fff;
+  font-size: 12px;
+  color: #fff;
+  border-radius: 30px;
+  padding: 10px 40px;
+  display: inline-block;
+  background-color: transparent;
+  &.style-02 {
+    border-color: $color-02;
+    color: $color-02;
+  }
+  &.style-03 {
+    border-color: $color-01;
+    color: $color-01;
+  }
+}
+
+.margin-top-50 {
+  margin-top: 50px;
+}
+
+.prm-title-01 {
+  text-align: center;
+  h3 {
+    font-size: 16px;
+    position: relative;
+    margin-bottom: 20px;
+    span {
+      position: relative;
+      z-index: 10;
+      padding: 0 30px;
+    }
+    &:before, &:after {
+      position: absolute;
+      top: 50%;
+      width: 85px;
+      height: 1px;
+      background-color: $color-02;
+      content: '';
+    }
+    &:before {
+      left: 0;
+    }
+    &:after {
+      right: 0;
+    }
+  }
+  p {
+    font-size: 10px;
+    color: #777;
+  }
+}
+
+.prm-title-02 {
+  font-size: 12px;
+  position: relative;
+  text-align: center;
+  margin: 20px 0;
+  &:before, &:after {
+    position: absolute;
+    top: 50%;
+    width: 125px;
+    height: 1px;
+    @include translate(0, -50%);
+    opacity: 0.6;
+    content: '';
+    background-color: #979797;
+  }
+  &:before {
+    left: 0;
+  }
+  &:after {
+    right: 0;
+  }
+}
+
+.prm-title-03 {
+  text-align: center;
+  margin-bottom: 65px;
+  h3 {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  p {
+    font-size: 18px;
+    color: $color-03;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}

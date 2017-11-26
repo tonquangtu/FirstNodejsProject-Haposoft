@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Premium Pilot</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="css/themify-icons.css">
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<header class="prm-main-header clearfix">
+  <div class="main-menu hidden-sm hidden-md hidden-lg">
+    <button id="show-menu" class="toggle-menu" onclick="showMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+      <i class="ti-close"></i>
+    </button>
+    <div id="sub-menu" class="sub-menu">
+      <div class="search-header">
+        <input type="text">
+        <i class="ti-search"></i>
+      </div>
+      <ul>
+        <li><a href="#">プロフィール</a></li>
+        <li><a href="#">相談履歴</a></li>
+        <li><a href="#">チケット</a></li>
+        <li><a href="#">お気に入り</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">PICK UP</a></li>
+        <li><a href="#">専門家申請</a></li>
+      </ul>
+    </div>
+  </div>
+  <h1 class="main-logo">
+    <a href="#"><img src="images/Premi-um.svg" alt=""></a>
+  </h1>
+  <a href="#" class="notification"><i class="ti-bell"></i></a>
+  <div class="search-header-pc hidden-xs">
+    <i class="ti-search"></i>
+    <input type="text" style="display: none">
+  </div>
+  <ul class="main-menu-pc hidden-xs">
+    <li><a href="#">ABOUT</a></li>
+    <li><a href="#">Pick up</a></li>
+    <li><a href="#">サインイン</a></li>
+    <li><a href="#">専門家申請</a></li>
+  </ul>
+</header>
+<div class="main-container">
+  <section class="prm-list-favorite">
+    <div class="container">
+      <div class="prm-title-03">
+        <h3>お気に入り</h3>
+      </div>
+      <div class="row">
+        <div class="col-md-4 col-sm-4 col-xs-12">
+          <div class="prm-item-specialist text-center">
+            <i class="delete-specialist ti-minus" onclick="confirmDeletePopup()"></i>
+            <div class="thumb">
+              <img src="images/avt.png" alt="">
+            </div>
+            <h3 class="name-specialist">Takafumi Horie</h3>
+            <p class="position">職業肩書き</p>
+            <p class="label-specialist"><i class="ti-tag"></i>ビジネス</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12">
+          <div class="prm-item-specialist text-center">
+            <i class="delete-specialist ti-minus"></i>
+            <div class="thumb">
+              <img src="images/avt.png" alt="">
+            </div>
+            <h3 class="name-specialist">Takafumi Horie</h3>
+            <p class="position">職業肩書き</p>
+            <p class="label-specialist"><i class="ti-tag"></i>ビジネス</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12">
+          <div class="prm-item-specialist text-center">
+            <i class="delete-specialist ti-minus"></i>
+            <div class="thumb">
+              <img src="images/avt.png" alt="">
+            </div>
+            <h3 class="name-specialist">Takafumi Horie</h3>
+            <p class="position">職業肩書き</p>
+            <p class="label-specialist"><i class="ti-tag"></i>ビジネス</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12">
+          <div class="prm-item-specialist text-center">
+            <i class="delete-specialist ti-minus"></i>
+            <div class="thumb">
+              <img src="images/avt.png" alt="">
+            </div>
+            <h3 class="name-specialist">Takafumi Horie</h3>
+            <p class="position">職業肩書き</p>
+            <p class="label-specialist"><i class="ti-tag"></i>ビジネス</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12">
+          <div class="prm-item-specialist text-center">
+            <i class="delete-specialist ti-minus"></i>
+            <div class="thumb">
+              <img src="images/avt.png" alt="">
+            </div>
+            <h3 class="name-specialist">Takafumi Horie</h3>
+            <p class="position">職業肩書き</p>
+            <p class="label-specialist"><i class="ti-tag"></i>ビジネス</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12">
+          <div class="prm-item-specialist text-center">
+            <i class="delete-specialist ti-minus"></i>
+            <div class="thumb">
+              <img src="images/avt.png" alt="">
+            </div>
+            <h3 class="name-specialist">Takafumi Horie</h3>
+            <p class="position">職業肩書き</p>
+            <p class="label-specialist"><i class="ti-tag"></i>ビジネス</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12">
+          <div class="prm-item-specialist text-center">
+            <i class="delete-specialist ti-minus"></i>
+            <div class="thumb">
+              <img src="images/avt.png" alt="">
+            </div>
+            <h3 class="name-specialist">Takafumi Horie</h3>
+            <p class="position">職業肩書き</p>
+            <p class="label-specialist"><i class="ti-tag"></i>ビジネス</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12">
+          <div class="prm-item-specialist text-center">
+            <i class="delete-specialist ti-minus"></i>
+            <div class="thumb">
+              <img src="images/avt.png" alt="">
+            </div>
+            <h3 class="name-specialist">Takafumi Horie</h3>
+            <p class="position">職業肩書き</p>
+            <p class="label-specialist"><i class="ti-tag"></i>ビジネス</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12">
+          <div class="prm-item-specialist text-center">
+            <i class="delete-specialist ti-minus"></i>
+            <div class="thumb">
+              <img src="images/avt.png" alt="">
+            </div>
+            <h3 class="name-specialist">Takafumi Horie</h3>
+            <p class="position">職業肩書き</p>
+            <p class="label-specialist"><i class="ti-tag"></i>ビジネス</p>
+          </div>
+        </div>
+      </div>
+      <div id="confirm-delete">
+        <i class="ti-close"></i>
+        <p class="text-center">お気に入りから削除しますか？</p>
+        <div class="text-center"><a href="#" class="global-btn style-02">削除する</a></div>
+      </div>
+    </div>
+    <div id="back-top" class="pull-right"><i class="ti-arrow-circle-up"></i></div>
+    <div class="clearfix"></div>
+  </section>
+</div>
+<footer class="prm-main-footer clearfix">
+  <div class="menu-footer pull-right">
+    <ul>
+      <li><a href="#">コンタクト</a></li>
+      <li><a href="#">プライバシーポリシー</a></li>
+      <li><a href="#">利用規約</a></li>
+    </ul>
+    <ul class="list-social hidden-xs">
+      <li><a href="#" class="ti-twitter-alt"></a></li>
+      <li><a href="#" class="ti-facebook"></a></li>
+      <li><a href="#" class="ti-youtube"></a></li>
+      <li><a href="#" class="ti-google"></a></li>
+    </ul>
+  </div>
+  <p class="copy-right pull-left">2017 Inc. All Rights Reserved</p>
+</footer>
+
+<script src="js/vue.js"></script>
+<script src="js/custom.js"></script>
+</body>
+</html>

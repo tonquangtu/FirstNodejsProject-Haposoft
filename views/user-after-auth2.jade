@@ -1,0 +1,85 @@
+doctype html
+html(lang='en')
+  head
+    title Premium Pilot
+  body
+
+    script.
+
+      var myId;
+      var myName;
+      var myAvatar;
+      var myEmail;
+      var myProfile;
+      var role;
+      var receiverId;
+      var receiverAvatar;
+      var receiverName;
+      var receiverEmail;
+
+      var expertTitle;
+      var expertOccupation;
+      var expertOccupationType;
+      var expertSubTitle;
+      var expertLike;
+      var expertRate;
+
+      var success = #{loginSuccess};
+      var isExpert = #{haveExpert};
+
+      if (success) {
+        myId = "#{user.id}";
+        myName = "#{user.account.name}";
+        myAvatar = getRawText('#{user.account.avatar_url}');
+        myEmail = "#{expert.account.email}";
+        myProfile = "#{expert.account.profile}";
+        role = "user";
+      }
+
+      if (isExpert) {
+        receiverId = "#{expert.id}";
+        receiverName = "#{expert.account.name}";
+        receiverAvatar = getRawText('#{expert.account.avatar_url}');
+        receiverEmail = "#{expert.account.email}";
+
+        expertTitle = "#{expert.title}";
+        expertSubTitle = "#{expert.sub_title}";
+        expertOccupation = "#{expert.occupation}";
+        expertOccupationType = "#{expert.occupation_type}";
+        expertLike = "#{expert.like}";
+        expertRate = "#{expert.rate}";
+      }
+
+      var data = {
+        success: success,
+        myId: myId,
+        myName: myName,
+        myAvatar: myAvatar,
+        myEmail: myEmail,
+        myProfile: myProfile,
+        role: role,
+        receiverId: receiverId,
+        receiverName: receiverName,
+        receiverAvatar: receiverAvatar,
+        receiverEmail: receiverEmail,
+
+        expertTitle: expertTitle,
+        expertSubTitle: expertSubTitle,
+        expertOccupation: expertOccupation,
+        expertOccupationType: expertOccupationType,
+        expertLike: expertLike,
+        expertRate: expertRate
+      };
+
+      window.opener.authenticateCallback(data);
+      window.close();
+
+      function getRawText(encodedStr) {
+
+        var parser = new DOMParser;
+        var dom = parser.parseFromString(
+          '<!doctype html><body>' + encodedStr,
+          'text/html');
+        var decodedString = dom.body.textContent;
+        return decodedString;
+      }

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Premium Pilot</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="css/themify-icons.css">
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<header class="prm-main-header clearfix">
+  <div class="prm-alert">
+    <p>メッセージ受信を通知するため、メールアドレスを登録しましょう。</p>
+    <a href="#"><i class="ti-close" ></i></a>
+  </div>
+  <div class="main-menu hidden-sm hidden-md hidden-lg">
+    <button id="show-menu" class="toggle-menu" onclick="showMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+      <i class="ti-close"></i>
+    </button>
+    <div id="sub-menu" class="sub-menu">
+      <div class="search-header">
+        <input type="text">
+        <i class="ti-search"></i>
+      </div>
+      <ul>
+        <li><a href="#">プロフィール</a></li>
+        <li><a href="#">相談履歴</a></li>
+        <li><a href="#">チケット</a></li>
+        <li><a href="#">お気に入り</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">PICK UP</a></li>
+        <li><a href="#">専門家申請</a></li>
+      </ul>
+    </div>
+  </div>
+  <h1 class="main-logo">
+    <a href="#"><img src="images/Premi-um.svg" alt=""></a>
+  </h1>
+  <!--Khi chưa login sẽ không có thành phần này-->
+  <div class="hamburger-menu hidden-xs">
+    <button type="button" onclick="showHamburgerMenu()"><i class="ti-menu"></i></button>
+    <ul id="hamburger-menu-content">
+      <li><a href="#">プロフィール</a></li>
+      <li><a href="#">相談履歴</a></li>
+      <li><a href="#">チケット</a></li>
+      <li><a href="#">お気に入り</a></li>
+    </ul>
+  </div>
+  <a href="#" class="notification"><i class="ti-bell"></i></a>
+  <div class="search-header-pc hidden-xs">
+    <i class="ti-search"></i>
+    <input type="text" style="display: none">
+  </div>
+  <ul class="main-menu-pc hidden-xs">
+    <li><a href="#">ABOUT</a></li>
+    <li><a href="#">Pick up</a></li>
+    <li><a href="#">サインイン</a></li>
+    <li><a href="#">専門家申請</a></li>
+  </ul>
+</header>
+<div class="main-container">
+  <section class="prm-main-banner">
+    <div class="container">
+      <div class="left-banner">
+        <h3 class="title-banner">
+          <img src="images/Icon-cmt.png" alt="">
+          有料相談専用ツール
+        </h3>
+        <h4>相談を受け付ける人</h4>
+        <p>URLを知らせるだけで簡単に有料相談を受け付けられます。専門知識をマネタイズできます。</p>
+        <h4>相談したい人</h4>
+        <p>チケットを購入して、簡単にメッセージで相談することができます。付加価値の高いコンサルティングが受けられます。</p>
+        <a href="#" class="global-btn">いますぐ始める</a>
+      </div>
+      <div class="right-banner">
+        <img src="images/banner.jpg" alt="">
+      </div>
+    </div>
+  </section>
+  <section class="prm-consultation">
+    <div class="container">
+      <div class="prm-title-03">
+        <h3>簡単に相談</h3>
+        <p>相談したい人を見つけて、チケットを購入して、相談するだけ。付加価値の高い相談が気軽に受けられます。</p>
+      </div>
+      <div class="content">
+        <div class="row">
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="prm-item-01 text-center">
+              <img src="images/Icon1.png" alt="">
+              <h4 class="title">Text</h4>
+              <p>Text Text TextTextText TextText TextText TextTextTextTextTextTextTextTextTextTextTextText</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="prm-item-01 text-center">
+              <img src="images/Icon2.png" alt="" style="margin-top: 17px">
+              <h4 class="title">Text</h4>
+              <p>Text Text TextTextText TextText TextText TextTextTextTextTextTextTextTextTextTextTextText</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="prm-item-01 text-center">
+              <img src="images/Icon5.png" alt="">
+              <h4 class="title">Text</h4>
+              <p>Text Text TextTextText TextText TextText TextTextTextTextTextTextTextTextTextTextTextText</p>
+            </div>
+          </div>
+        </div>
+        <div class="text-center">
+          <a href="#" class="global-btn style-03">いますぐ始める</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="prm-consultation style-02">
+    <div class="container">
+      <div class="prm-title-03">
+        <h3>専門家として相談受付</h3>
+        <p>自分で料金設定をして、相談を受け、料金を受け取ることができます。あなたの専門知識を活かしましょう。</p>
+      </div>
+      <div class="content">
+        <div class="row">
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="prm-item-01 text-center">
+              <img src="images/Icon4.png" alt="">
+              <h4 class="title">Text</h4>
+              <p>Text Text TextTextText TextText TextText TextTextTextTextTextTextTextTextTextTextTextText</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="prm-item-01 text-center">
+              <img src="images/Icon5.png" alt="">
+              <h4 class="title">Text</h4>
+              <p>Text Text TextTextText TextText TextText TextTextTextTextTextTextTextTextTextTextTextText</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="prm-item-01 text-center">
+              <img src="images/Icon6.png" alt="">
+              <h4 class="title">Text</h4>
+              <p>Text Text TextTextText TextText TextText TextTextTextTextTextTextTextTextTextTextTextText</p>
+            </div>
+          </div>
+        </div>
+        <div class="text-center">
+          <a href="#" class="global-btn style-03">いますぐ始める</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="prm-pick-up">
+    <div class="container">
+      <div class="prm-title-03">
+        <h3>PICK UP</h3>
+        <p>相談したい人を見つけて、チケットを購入して、相談するだけ。</p>
+      </div>
+      <div class="content">
+        <div class="row">
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="prm-item-specialist text-center">
+              <div class="thumb">
+                <img src="images/avt.png" alt="">
+              </div>
+              <h3 class="name-specialist">Takafumi Horie</h3>
+              <p class="position">職業肩書き</p>
+              <p class="label-specialist"><i class="ti-tag"></i>ビジネス</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="prm-item-specialist text-center">
+              <div class="thumb">
+                <img src="images/avt.png" alt="">
+              </div>
+              <h3 class="name-specialist">Takafumi Horie</h3>
+              <p class="position">職業肩書き</p>
+              <p class="label-specialist"><i class="ti-tag"></i>ビジネス</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="prm-item-specialist text-center">
+              <div class="thumb">
+                <img src="images/avt.png" alt="">
+              </div>
+              <h3 class="name-specialist">Takafumi Horie</h3>
+              <p class="position">職業肩書き</p>
+              <p class="label-specialist"><i class="ti-tag"></i>ビジネス</p>
+            </div>
+          </div>
+
+        </div>
+        <div class="text-center">
+          <a href="#" class="global-btn style-03">いますぐ始める</a>
+        </div>
+      </div>
+    </div>
+    <div id="back-top" class="pull-right"><i class="ti-arrow-circle-up"></i></div>
+    <div class="clearfix"></div>
+  </section>
+</div>
+<footer class="prm-main-footer clearfix">
+  <div class="menu-footer pull-right">
+    <ul>
+      <li><a href="#">コンタクト</a></li>
+      <li><a href="#">プライバシーポリシー</a></li>
+      <li><a href="#">利用規約</a></li>
+    </ul>
+    <ul class="list-social hidden-xs">
+      <li><a href="#" class="ti-twitter-alt"></a></li>
+      <li><a href="#" class="ti-facebook"></a></li>
+      <li><a href="#" class="ti-youtube"></a></li>
+      <li><a href="#" class="ti-google"></a></li>
+    </ul>
+  </div>
+  <p class="copy-right pull-left">2017 Inc. All Rights Reserved</p>
+</footer>
+
+<script src="js/vue.js"></script>
+<script src="js/custom.js"></script>
+<script>
+  function showHamburgerMenu() {
+    let hamburgerMenuContent = document.getElementById("hamburger-menu-content");
+    hamburgerMenuContent.classList.toggle("active");
+  }
+</script>
+</body>
+</html>

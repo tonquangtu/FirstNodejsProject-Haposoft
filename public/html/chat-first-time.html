@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Premium Pilot</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="css/themify-icons.css">
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body class="has-chat-area">
+<header class="prm-main-header clearfix">
+  <div class="main-menu hidden-sm hidden-md hidden-lg">
+    <button id="show-menu" class="toggle-menu" onclick="showMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+      <i class="ti-close"></i>
+    </button>
+    <div id="sub-menu" class="sub-menu">
+      <div class="search-header">
+        <input type="text">
+        <i class="ti-search"></i>
+      </div>
+      <ul>
+        <li><a href="#">プロフィール</a></li>
+        <li><a href="#">相談履歴</a></li>
+        <li><a href="#">チケット</a></li>
+        <li><a href="#">お気に入り</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">PICK UP</a></li>
+        <li><a href="#">専門家申請</a></li>
+      </ul>
+    </div>
+  </div>
+  <h1 class="main-logo">
+    <a href="#"><img src="images/Premi-um.svg" alt=""></a>
+  </h1>
+  <!--Khi chưa login sẽ không có thành phần này-->
+  <div class="hamburger-menu hidden-xs">
+    <button type="button" onclick="showHamburgerMenu()"><i class="ti-menu"></i></button>
+    <ul id="hamburger-menu-content">
+      <li><a href="#">プロフィール</a></li>
+      <li><a href="#">相談履歴</a></li>
+      <li><a href="#">チケット</a></li>
+      <li><a href="#">お気に入り</a></li>
+    </ul>
+  </div>
+  <a href="#" class="notification" onclick="showNotification()"><i class="ti-bell"></i></a>
+  <ul id="list-notification">
+    <li>
+      <a href="#">
+        <i class="noti-detail">abcさんからメッセージを受信しました。</i>
+        <span class="time">2分前</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <i class="noti-detail">abcさんからメッセージを受信しました。</i>
+        <span class="time">2分前</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <i class="noti-detail">abcさんからメッセージを受信しました。</i>
+        <span class="time">2分前</span>
+      </a>
+    </li>
+  </ul>
+  <div class="search-header-pc hidden-xs">
+    <i class="ti-search" onclick="showInputSearch()"></i>
+    <input id="input-search-header" type="text" placeholder="Search...">
+  </div>
+  <ul class="main-menu-pc hidden-xs">
+    <li><a href="#">ABOUT</a></li>
+    <li><a href="#">Pick up</a></li>
+    <li><a href="#">サインイン</a></li>
+    <li><a href="#">専門家申請</a></li>
+  </ul>
+</header>
+
+<div class="main-container signed">
+  <section class="prm-profile">
+    <div class="profile-detail clearfix">
+      <div class="container">
+        <div class="avatar">
+          <img src="images/avt.png" alt="">
+        </div>
+        <div class="content">
+          <h3 class="name">Takafumi Horie</h3>
+          <h4 class="position"><i class="ti-tag"></i>ビジネス</h4>
+          <p class="group-label">
+            <span>企業家</span>
+            <span>プロフィール</span>
+            <button><i class="ti-plus"></i></button>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="group-social ">
+      <div class="container">
+        <ul class="clearfix">
+          <li class="twitter"><a href="#"><i class="ti-twitter"></i></a></li>
+          <li class="count-likes">
+            <span>78 Likes</span>
+            <i class="ti-heart"></i>
+          </li>
+          <li class="count-mail">
+            <span>1,000円 / 1通</span>
+            <i class="ti-email"></i>
+          </li>
+          <li class="count-ratting">
+            <span>23レビュー</span>
+            <i class="ti-star"></i>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="chat-area">
+      <div class="container">
+        <ul>
+          <li class="host clearfix">
+            <div class="avatar">
+              <img src="images/avt.png" alt="">
+            </div>
+            <div class="chat-detail">
+              <p>なんでもどうぞ</p>
+              <a href="#">注意事項</a>
+            </div>
+          </li>
+          <li class="client clearfix">
+            <div class="avatar">
+              <img src="images/avt.png" alt="">
+            </div>
+            <div class="chat-detail">
+              <p>資金100万円で投資をスタートしたいのですが、何をやればいいでしょうか？収入源を増やしたいです。</p>
+              <a href="#">注意事項</a>
+              <footer class="status-chat clearfix">
+                <span class="pull-left">2017/7/28 14:30</span>
+                <span class="pull-right">既読</span>
+              </footer>
+            </div>
+          </li>
+          <li class="host clearfix">
+            <div class="avatar">
+              <img src="images/avt.png" alt="">
+            </div>
+            <div class="chat-detail">
+              <p>100万円あれば投資ではなく、ビジネスをつくります。いくつかアイデアを教えます。</p>
+              <ul class="list-img">
+                <li><img src="images/Image1.jpg" alt=""></li>
+                <li><img src="images/Image2.jpg" alt=""></li>
+                <li><img src="images/Image3.jpg" alt=""></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+        <p class="the-first-time">今回のメッセージ送信は無料です</p>
+      </div>
+      <div class="input-area">
+        <div class="container">
+          <button class="add-image"><i class="ti-plus"></i></button>
+          <input type="text " placeholder="コメント">
+          <button class="submit-chat">送信</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<script src="js/vue.js"></script>
+</body>
+
+</html>

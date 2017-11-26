@@ -1,0 +1,90 @@
+doctype html
+html(lang='en')
+  head
+    title Premium
+  body
+
+    script.
+
+      var myId;
+      var myName;
+      var myAvatar;
+      var myEmail;
+      var myProfile;
+      var role;
+
+      var receiverId;
+      var receiverAvatar;
+      var receiverName;
+      var receiverEmail;
+
+      var expertTitle;
+      var expertOccupation;
+      var expertOccupationType;
+      var expertSubTitle;
+      var expertLike;
+      var expertRate;
+
+      var success = #{loginSuccess};
+      var haveUser = #{haveUser};
+
+      if (success) {
+        myId = "#{expert.id}";
+        myName = "#{expert.account.name}";
+        myAvatar = getRawText('#{expert.account.avatar_url}');
+        myEmail = "#{expert.account.email}";
+        myProfile = "#{expert.account.profile}";
+        role = "expert";
+
+        expertTitle = "#{expert.title}";
+        expertSubTitle = "#{expert.sub_title}";
+        expertOccupation = "#{expert.occupation}";
+        expertOccupationType = "#{expert.occupation_type}";
+        expertLike = "#{expert.like}";
+        expertRate = "#{expert.rate}";
+      }
+
+      if (haveUser) {
+        receiverId = "#{user.id}";
+        receiverName = "#{user.account.name}";
+        receiverAvatar = getRawText('#{user.account.avatar_url}');
+        receiverEmail = "#{user.account.email}";
+      }
+
+      var data = {
+        success: success,
+        myId: myId,
+        myName: myName,
+        myAvatar: myAvatar,
+        myEmail: myEmail,
+        myProfile: myProfile,
+        role: role,
+        receiverId: receiverId,
+        receiverName: receiverName,
+        receiverAvatar: receiverAvatar,
+        receiverEmail: receiverEmail,
+
+        expertTitle: expertTitle,
+        expertSubTitle: expertSubTitle,
+        expertOccupation: expertOccupation,
+        expertOccupationType: expertOccupationType,
+        expertLike: expertLike,
+        expertRate: expertRate
+      };
+
+      window.console.log('go to expert auth 2')
+
+      window.opener.authenticateCallback(data);
+      window.close();
+
+      function getRawText(encodedStr) {
+
+        var parser = new DOMParser;
+        var dom = parser.parseFromString(
+          '<!doctype html><body>' + encodedStr,
+          'text/html');
+        var decodedString = dom.body.textContent;
+        console.log(decodedString);
+        return decodedString;
+      }
+

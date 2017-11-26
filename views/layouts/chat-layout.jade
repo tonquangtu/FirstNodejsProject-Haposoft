@@ -1,0 +1,14 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title Premium Pilot
+    link(rel='stylesheet', href='../stylesheets/themify-icons.css')
+    //link(rel='stylesheet', href='../stylesheets/chat-style.css')
+    script(src='/socket.io/socket.io.js')
+    script(src='/socket.io-file-client.js')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  body.has-chat-area
+    block content
+    script(src='/dist/chat-page.bundle.js')

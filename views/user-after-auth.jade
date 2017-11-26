@@ -1,0 +1,47 @@
+doctype html
+html(lang='en')
+  head
+    title Premium Pilot
+  body
+
+    script.
+
+      var myId;
+      var myName;
+      var myAvatar;
+      var myEmail;
+      var myProfile;
+      var role;
+      var success = #{loginSuccess};
+
+      if (success === true) {
+        myId = "#{user.id}";
+        myName = "#{user.account.name}";
+        myAvatar = getRawText('#{user.account.avatar_url}');
+        myProfile = "#{user.account.profile}";
+        role = "user";
+        myEmail = "#{user.account.email}";
+      }
+
+      let data = {
+        success: success,
+        myId: myId,
+        myName: myName,
+        myAvatar: myAvatar,
+        myProfile: myProfile,
+        myEmail: myEmail,
+        role: role
+      };
+
+      window.opener.authenticateCallback(data);
+      window.close();
+
+      function getRawText(encodedStr) {
+
+        let parser = new DOMParser;
+        let dom = parser.parseFromString(
+          '<!doctype html><body>' + encodedStr,
+          'text/html');
+        let decodedString = dom.body.textContent;
+        return decodedString;
+      }
